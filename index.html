@@ -3,19 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customs & Export Control Consultant - ATC2-TACTICS</title>
+<title>Customs & Export Control Consultant - Tristan ARCOFORA</title>
 <style>
 body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; color: #333; }
-header { background: #0a3d62; color: white; padding: 2rem; text-align: center; }
-header h1 { margin: 0; font-size: 2.5rem; }
-header p { font-size: 1.2rem; margin-top: 0.5rem; }
-.logo { max-width: 150px; margin-bottom: 1rem; } /* New CSS for the logo */
+header { 
+  background: #0a3d62; 
+  color: white; 
+  padding: 2rem; 
+  display: flex; /* Enables Flexbox layout */
+  align-items: center; /* Vertically centers items */
+  justify-content: flex-start; /* aligns items to the start of the container */
+}
 
+.header-content {
+  text-align: left; /* Aligns the text content to the left */
+  margin-left: 8rem; /* Adds space between the logo and text */
+  flex-grow: 1; /* Allows this content to take up available space */
+}
+header h1 { margin: 1; font-size: 2.5rem; }
+header p { font-size: 1.2rem; margin-top: 0.5rem; }
+.logo { 
+  max-width: 170px; 
+  margin-left: 5rem; /* Adds space to the right of the logo */
+}
+.lang-selector {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
 section { padding: 2rem; max-width: 900px; margin: auto; }
 h2 { color: #0a3d62; border-bottom: 2px solid #0a3d62; padding-bottom: 0.3rem; }
 .offer { background: #f1f2f6; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; }
 .offer h3 { margin-top: 0; }
-.cta { text-align: center; margin: 3rem 0; }
+..cta {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .cta a { background: #0a3d62; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
 footer { background: #2f3542; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
 .contact-info { margin-top: 1rem; }
@@ -25,13 +55,19 @@ footer { background: #2f3542; color: white; text-align: center; padding: 1rem; m
 
 <header>
 <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/atc2-logo.png.png" alt="ATC² TACTICS Logo" class="logo">
-<h1>ATC² TACTICS</h1>
-<p>Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore</p>
+<div class="header-content">
+  <h1>Tristan ARCOFORA</h1>
+  <p>Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore</p>
+</div>
+<div>
+    <button class="lang-selector" onclick="changeLanguage('en')">EN</button>
+    <button class="lang-selector" onclick="changeLanguage('fr')">FR</button>
+</div>
 </header>
 
 <section>
-<h2>About Me</h2>
-<p>
+<h2 data-i18n="aboutMeTitle">About Me</h2>
+<p data-i18n="aboutMeText">
 With extensive experience in customs regulations and export control across multiple regions,
 I help businesses secure compliance and optimize their international operations.
 My mission is to simplify complex regulations and provide actionable solutions.
@@ -39,55 +75,137 @@ My mission is to simplify complex regulations and provide actionable solutions.
 </section>
 
 <section>
-<h2>Consulting Offers</h2>
+<h2 data-i18n="offersTitle">Consulting Offers</h2>
 
 <div class="offer">
-<h3>🔹 Offer 1: Flash Audit (Customs or Export Control)</h3>
-<p>1h initial interview, rapid analysis of existing procedures, and a concise report with 3–5 priority points.</p>
-<p><b>Duration:</b> ½ day (650€) / Full day (Customs + Export Control: 1,200€)</p>
+<h3 data-i18n="offer1Title">🔹 Offer 1: Flash Audit (Customs or Export Control)</h3>
+<p data-i18n="offer1Description">1h initial interview, rapid analysis of existing procedures, and a concise report with 3–5 priority points.</p>
+<p data-i18n="offer1Duration"><b>Duration:</b> ½ day (650€) / Full day (Customs + Export Control: 1,200€)</p>
 </div>
 
 <div class="offer">
-<h3>🔹 Offer 2: In-Depth Diagnostic</h3>
-<p>Detailed analysis of practices & procedures, creation of a simplified risk matrix, and a short-term action plan.</p>
-<p><b>Duration:</b> ~3 days | <b>Price:</b> 3,500€ (+1,000€ option for 2 days of flow & cost analysis)</p>
+<h3 data-i18n="offer2Title">🔹 Offer 2: In-Depth Diagnostic</h3>
+<p data-i18n="offer2Description">Detailed analysis of practices & procedures, creation of a simplified risk matrix, and a short-term action plan.</p>
+<p data-i18n="offer2Duration"><b>Duration:</b> ~3 days | <b>Price:</b> 3,500€ (+1,000€ option for 2 days of flow & cost analysis)</p>
 </div>
 
 <div class="offer">
-<h3>🔹 Offer 3: Full Audit</h3>
-<p>Comprehensive activity analysis, detailed risk matrix, action plan, customs flow & cost optimization, procedure drafting/updating.</p>
-<p><b>Duration:</b> 7–10 days | <b>Price:</b> 6,000€</p>
+<h3 data-i18n="offer3Title">🔹 Offer 3: Full Audit</h3>
+<p data-i18n="offer3Description">Comprehensive activity analysis, detailed risk matrix, action plan, customs flow & cost optimization, procedure drafting/updating.</p>
+<p data-i18n="offer3Duration"><b>Duration:</b> 7–10 days | <b>Price:</b> 6,000€</p>
 </div>
 
 <div class="offer">
-<h3>🔹 Offer 4: Ongoing Support</h3>
-<p>On-demand answers to regulatory or technical questions, and support for complex cases.</p>
-<p><b>Price:</b> 800€ – 1,500€ (depending on scope)</p>
+<h3 data-i18n="offer4Title">🔹 Offer 4: Ongoing Support</h3>
+<p data-i18n="offer4Description">On-demand answers to regulatory or technical questions, and support for complex cases.</p>
+<p data-i18n="offer4Duration"><b>Price:</b> 800€ – 1,500€ (depending on scope)</p>
 </div>
 </section>
 
 <section>
-<h2>Travel Fee Policy</h2>
+<h2 data-i18n="travelTitle">Travel Fee Policy</h2>
 <ul>
-<li>Local zone (≤ 50 km round trip): included</li>
-<li>Regional zone (51–250 km): 150€/day + actual expenses</li>
-<li>National (>250 km or overnight stay): 300€/day + actual expenses</li>
-<li>International: upon request (travel & accommodation at client’s expense)</li>
+<li data-i18n="travelLocal">Local zone (≤ 50 km round trip): included</li>
+<li data-i18n="travelRegional">Regional zone (51–250 km): 150€/day + actual expenses</li>
+<li data-i18n="travelNational">National (>250 km or overnight stay): 300€/day + actual expenses</li>
+<li data-i18n="travelInternational">International: upon request (travel & accommodation at client’s expense)</li>
 </ul>
 </section>
 
 <section class="cta">
-<h2>📩 Get in Touch</h2>
-<p>Contact me to discuss your needs and build a tailored solution.</p>
-<a href="mailto:tristan.arcofora@gmail.com">Email Me</a>
+<h2 data-i18n="contactTitle">📩 Get in Touch</h2>
+<p data-i18n="contactText">Contact me to discuss your needs and build a tailored solution.</p>
+<a href="mailto:tristan.arcofora@atc2-tactics.com" data-i18n="contactButton">Email Me</a>
 </section>
 
 <footer>
-<p>&copy; 2025 Tristan ARCOFORA – Customs & Export Control Consultant</p>
+<p data-i18n="footerCopyright">© 2025 Tristan ARCOFORA – Customs & Export Control Consultant</p>
 <div class="contact-info">
-<p>📧 tristan.arcofora@gmail.com | 🔗 <a href="https://www.linkedin.com/in/yourprofile" style="color: #1da1f2;">LinkedIn</a> | 🌍 <a href="https://www.malt.fr/profile/yourmalt" style="color: #1da1f2;">Malt Profile</a></p>
+<p> tristan.arcofora@atc2-tactics.com |  <a href="https://www.linkedin.com/in/yourprofile" style="color: #1da1f2;">LinkedIn</a> |  <a href="https://www.malt.fr/profile/yourmalt" style="color: #1da1f2;">Malt Profile</a></p>
 </div>
 </footer>
+
+<script>
+    const translations = {
+        en: {
+            pageTitle: 'Customs & Export Control Consultant - Tristan ARCOFORA',
+            headerSubtitle: 'Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore',
+            aboutMeTitle: 'About Me',
+            aboutMeText: 'With extensive experience in customs regulations and export control across multiple regions, I help businesses secure compliance and optimize their international operations. My mission is to simplify complex regulations and provide actionable solutions.',
+            offersTitle: 'Consulting Offers',
+            offer1Title: 'Offer 1: Flash Audit (Customs or Export Control)',
+            offer1Description: '1h initial interview, rapid analysis of existing procedures, and a concise report with 3–5 priority points.',
+            offer1Duration: '<b>Duration:</b> ½ day (650€) / Full day (Customs + Export Control: 1,200€)',
+            offer2Title: 'Offer 2: In-Depth Diagnostic',
+            offer2Description: 'Detailed analysis of practices & procedures, creation of a simplified risk matrix, and a short-term action plan.',
+            offer2Duration: '<b>Duration:</b> ~3 days | <b>Price:</b> 3,500€ (+1,000€ option for 2 days of flow & cost analysis)',
+            offer3Title: 'Offer 3: Full Audit',
+            offer3Description: 'Comprehensive activity analysis, detailed risk matrix, action plan, customs flow & cost optimization, procedure drafting/updating.',
+            offer3Duration: '<b>Duration:</b> 7–10 days | <b>Price:</b> 6,000€',
+            offer4Title: 'Offer 4: Ongoing Support',
+            offer4Description: 'On-demand answers to regulatory or technical questions, and support for complex cases.',
+            offer4Duration: '<b>Price:</b> 800€ – 1,500€ (depending on scope)',
+            travelTitle: 'Travel Fee Policy',
+            travelLocal: 'Local zone (≤ 50 km round trip): included',
+            travelRegional: 'Regional zone (51–250 km): 150€/day + actual expenses',
+            travelNational: 'National (>250 km or overnight stay): 300€/day + actual expenses',
+            travelInternational: 'International: upon request (travel & accommodation at client’s expense)',
+            contactTitle: 'Get in Touch',
+            contactText: 'Contact me to discuss your needs and build a tailored solution.',
+            contactButton: 'Email Me',
+            footerCopyright: '© 2025 Tristan ARCOFORA – Customs & Export Control Consultant'
+        },
+        fr: {
+            pageTitle: 'Conseil Douanes & Contrôle des Exportations - Tristan ARCOFORA',
+            headerSubtitle: 'Conseil Douanes & Contrôle des Exportations – Expertise: US / EU / UK / Hong Kong / Singapore',
+            aboutMeTitle: 'À propos de moi',
+            aboutMeText: 'Fort d\'une vaste expérience en réglementation douanière et en contrôle des exportations dans plusieurs régions, j\'aide les entreprises à assurer leur conformité et à optimiser leurs opérations internationales. Ma mission est de simplifier les réglementations complexes et de fournir des solutions concrètes.',
+            offersTitle: 'Offres de services',
+            offer1Title: 'Offre 1: Audit Flash (Douanes ou Contrôle des Exportations)',
+            offer1Description: 'Entretien initial d\'1h, analyse rapide des procédures existantes et rapport concis avec 3 à 5 points prioritaires.',
+            offer1Duration: '<b>Durée:</b> ½ journée (650€) / Journée complète (Douanes + Contrôle des Exportations : 1 200€)',
+            offer2Title: 'Offre 2: Diagnostic Approfondi',
+            offer2Description: 'Analyse détaillée des pratiques et procédures, création d\'une matrice de risques simplifiée et plan d\'action à court terme.',
+            offer2Duration: '<b>Durée:</b> ~3 jours | <b>Prix:</b> 3 500€ (+1 000€ option pour 2 jours d\'analyse de flux et de coûts)',
+            offer3Title: 'Offre 3: Audit Complet',
+            offer3Description: 'Analyse complète des activités, matrice de risques détaillée, plan d\'action, optimisation des flux et des coûts douaniers, rédaction/mise à jour des procédures.',
+            offer3Duration: '<b>Durée:</b> 7–10 jours | <b>Prix:</b> 6 000€',
+            offer4Title: 'Offre 4: Support continu',
+            offer4Description: 'Réponses à la demande aux questions réglementaires ou techniques, et support pour les cas complexes.',
+            offer4Duration: '<b>Prix:</b> 800€ – 1 500€ (selon la portée)',
+            travelTitle: 'Politique des frais de déplacement',
+            travelLocal: 'Zone locale (≤ 50 km aller-retour) : incluse',
+            travelRegional: 'Zone régionale (51–250 km) : 150€/jour + frais réels',
+            travelNational: 'Nationale (>250 km ou nuitée) : 300€/jour + frais réels',
+            travelInternational: 'Internationale : sur demande (voyage et hébergement à la charge du client)',
+            contactTitle: 'Me contacter',
+            contactText: 'Contactez-moi pour discuter de vos besoins et construire une solution sur mesure.',
+            contactButton: 'M\'envoyer un e-mail',
+            footerCopyright: '© 2025 Tristan ARCOFORA – Conseil Douanes & Contrôle des Exportations'
+        }
+    };
+
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                // Check if the translation contains HTML (like the <b> tag)
+                if (translations[lang][key].includes('<b>')) {
+                    element.innerHTML = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+
+        // Update the page title separately
+        document.title = translations[lang].pageTitle;
+    }
+
+    // Set initial language on page load
+    changeLanguage('en');
+</script>
 
 </body>
 </html>
