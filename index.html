@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customs & Export Control Consultant - Tristan ARCOFORA</title>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -14,45 +15,37 @@
   "logo": "https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/atc2-logo.png.png"
 }
 </script>
+
 <style>
-/* General styles for all screen sizes (mobile first) */
+/* ---------------------------------------------------------------------- */
+/* 1. GENERAL & MOBILE-FIRST STYLES (Applies to all screens) */
+/* ---------------------------------------------------------------------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
   color: #333;
+  scroll-behavior: smooth;
 }
+section { padding: 2rem; max-width: 900px; margin: auto; }
+h2 { color: #0a3d62; border-bottom: 2px solid #0a3d62; padding-bottom: 0.3rem; }
+a { color: #0a3d62; text-decoration: none; }
 
+/* Header & Navigation */
 header {
   background: #0a3d62;
   color: white;
   padding: 2rem;
   display: flex;
-  flex-direction: column; /* Stacks items vertically on mobile */
-  align-items: center; /* Centers items */
-  text-align: center; /* Centers text */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
 }
-
-.logo {
-  max-width: 170px;
-  margin-bottom: 1rem; /* Adds space below the logo */
-}
-
-.header-content {
-  text-align: center; /* Aligns text in the center for mobile */
-  margin-left: 0; /* Removes the fixed margin from desktop view */
-}
-
-header h1 {
-  margin: 1rem 0 0.5rem 0; /* Adjusts margins for better mobile spacing */
-  font-size: 1.8rem; /* Smaller font for mobile */
-}
-
-header p {
-  font-size: 1rem; /* Smaller font for mobile */
-  margin-top: 0;
-}
-
+.logo { max-width: 170px; margin-bottom: 1rem; }
+.logocard { max-width: 200px; text-align: center; }
+.header-content { text-align: center; margin-left: 0; }
+header h1 { margin: 1rem 0 0.5rem 0; font-size: 1.8rem; }
+header p { font-size: 1rem; margin-top: 0; }
 .lang-selector {
   background: none;
   border: 1px solid white;
@@ -61,46 +54,112 @@ header p {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
-  margin-left: 0.5rem; /* Reduces space between buttons */
-  margin-top: 1rem; /* Adds space above buttons */
+  margin-left: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* Desktop Styles - These will override the mobile styles on larger screens */
-@media screen and (min-width: 768px) {
-  header {
-    flex-direction: row; /* Returns to a horizontal layout on desktop */
-    justify-content: flex-start;
-  }
-
-  .logo {
-    margin-left: 5rem;
-    margin-bottom: 0;
-  }
-
-  .header-content {
-    text-align: left;
-    margin-left: 8rem;
-    flex-grow: 1;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  header p {
-    font-size: 1.2rem;
-  }
-
-  .lang-selector {
-    margin-left: 1rem;
-    margin-top: 0;
-  }
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  justify-content: center;
+  background: #f1f2f6;
+  border-bottom: 2px solid #0a3d62;
 }
 
-section { padding: 2rem; max-width: 900px; margin: auto; }
-h2 { color: #0a3d62; border-bottom: 2px solid #0a3d62; padding-bottom: 0.3rem; }
-.offer { background: #f1f2f6; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; }
-.offer h3 { margin-top: 0; }
+#main-nav li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #0a3d62;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+#main-nav li a:hover {
+  background: #0a3d62;
+  color: white;
+}
+
+/* Consulting & Training Grid Layout */
+.deliverables-container,
+.training-offers-grid {
+  display: grid;
+  /* Creates a responsive grid: 1 column on mobile, 2+ on desktop */
+  grid-template-columns: 1fr; /* Default to 1 column */
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.deliverable-card,
+.training-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.deliverable-card {
+  background: #f1f2f6;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.deliverable-card .icon {
+  font-size: 3rem;
+  color: #0a3d62;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.training-card {
+  background: #f1f2f6; 
+  border-left: 5px solid #0a3d62; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border-radius:8px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.training-card h3 { color: #0a3d62; margin-top: 0; text-align: center;}
+.training-card ul { list-style: disc; margin-left: 0.2rem; flex-grow: 0;margin-bottom: 0.5rem;}
+.cta-button { 
+  display: inline-block;
+  width: fit-content;
+  background: #0a3d62; 
+  color: white; 
+  padding: 0.8rem 1.5rem; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: auto;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+/* The initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px); /* Slides it down 30px */
+  transition: all 0.8s ease-out; /* Controls the speed and smoothness */
+}
+
+/* The state when the element becomes visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* Slides back to original position */
+}
+
+/* Optional: Add a slight delay for grid items to create a 'wave' effect */
+.deliverables-container .reveal:nth-child(2) { transition-delay: 0.2s; }
+.deliverables-container .reveal:nth-child(3) { transition-delay: 0.4s; }
+.deliverables-container .reveal:nth-child(4) { transition-delay: 0.6s; }
+
+/* Call to Action (CTA) */
 ..cta {
   margin: 3rem 0;
   display: flex;
@@ -108,8 +167,46 @@ h2 { color: #0a3d62; border-bottom: 2px solid #0a3d62; padding-bottom: 0.3rem; }
   align-items: center;
 }
 .cta a { background: #0a3d62; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
+
+/* Footer */
 footer { background: #2f3542; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
 .contact-info { margin-top: 1rem; }
+
+/* ---------------------------------------------------------------------- */
+/* 2. DESKTOP STYLES (Overrides for screens wider than 768px) */
+/* ---------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: row; 
+    justify-content: flex-start;
+  }
+  .logo {
+    margin-left: 5rem;
+    margin-bottom: 0;
+  }
+  .header-content {
+    text-align: left;
+    margin-left: 8rem;
+    flex-grow: 1;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  .lang-selector {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+  
+  /* Services and Training Grids */
+  .deliverables-container,
+  .training-offers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 </style>
 </head>
 <body>
@@ -117,16 +214,26 @@ footer { background: #2f3542; color: white; text-align: center; padding: 1rem; m
 <header>
 <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/atc2-logo.png.png" alt="ATC² TACTICS Logo" class="logo">
 <div class="header-content">
-  <h1>Tristan ARCOFORA</h1>
-  <p>Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore</p>
+  <h1>Tristan ARCOFORA</h1>
+  <p>Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore</p>
 </div>
 <div>
-    <button class="lang-selector" onclick="changeLanguage('en')">EN</button>
-    <button class="lang-selector" onclick="changeLanguage('fr')">FR</button>
+    <button class="lang-selector" onclick="changeLanguage('en')">EN</button>
+    <button class="lang-selector" onclick="changeLanguage('fr')">FR</button>
 </div>
 </header>
 
-<section>
+<nav id="main-nav">
+  <ul>
+    <li><a href="#about" data-i18n="navAbout">About</a></li>
+    <li><a href="#services" data-i18n="navConsulting">Consulting</a></li>
+    <li><a href="#training" data-i18n="navTraining">Training</a></li>
+    <li><a href="#contact-section" data-i18n="navContact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<section id="about">
 <h2 data-i18n="aboutMeTitle">About Me</h2>
 <p data-i18n="aboutMeText">
 With extensive experience in customs regulations and export control across multiple regions,
@@ -135,45 +242,74 @@ My mission is to simplify complex regulations and provide actionable solutions.
 </p>
 </section>
 
-<section>
-<h2 data-i18n="offersTitle">Consulting Offers</h2>
 
-<div class="offer">
-<h3 data-i18n="offer1Title">🔹 Offer 1: Flash Audit (Customs or Export Control)</h3>
-<p data-i18n="offer1Description">1h initial interview, rapid analysis of existing procedures, and a concise report with 3–5 priority points.</p>
-<p data-i18n="offer1Duration"><b>Duration:</b> ½ day (650€) / Full day (Customs + Export Control: 1,200€)</p>
-</div>
+<section id="services">
+<h2 data-i18n="offersTitle">Consulting Offers & Deliverables</h2>
 
-<div class="offer">
-<h3 data-i18n="offer2Title">🔹 Offer 2: In-Depth Diagnostic</h3>
-<p data-i18n="offer2Description">Detailed analysis of practices & procedures, creation of a simplified risk matrix, and a short-term action plan.</p>
-<p data-i18n="offer2Duration"><b>Duration:</b> ~3 days | <b>Indicative price:</b> 3,500€ (+1,000€ option for 2 days of flow & cost analysis)</p>
-</div>
+<div class="deliverables-container">
+  
+  <div class="deliverable-card reveal">
+    <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/clock.png" alt="ATC² TACTICS Logo" class="logocard">
+    <h3 data-i18n="offer1Title">Flash Audit (Customs or Export Control)</h3>
+    <p data-i18n="offer1Description">1h interview, rapid analysis, and a concise report with 3–5 priority points.</p>
+    <p data-i18n="offer1Duration"><b>Duration:</b> ½ day </p>
+  </div>
 
-<div class="offer">
-<h3 data-i18n="offer3Title">🔹 Offer 3: Full Audit</h3>
-<p data-i18n="offer3Description">Comprehensive activity analysis, detailed risk matrix, action plan, customs flow & cost optimization, procedure drafting/updating.</p>
-<p data-i18n="offer3Duration"><b>Duration:</b> 7–10 days | <b>Indicative price:</b> 6,000€</p>
-</div>
+  <div class="deliverable-card reveal">
+    <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/charts.png" alt="ATC² TACTICS Logo" class="logocard">  
+    <h3 data-i18n="offer2Title">In-Depth Diagnostic</h3>
+    <p data-i18n="offer2Description">Detailed analysis of practices, simplified risk matrix, and a short-term action plan.</p>
+    <p data-i18n="offer2Duration"><b>Duration:</b> ~3 days</p>
+  </div>
 
-<div class="offer">
-<h3 data-i18n="offer4Title">🔹 Offer 4: Ongoing Support</h3>
-<p data-i18n="offer4Description">On-demand answers to regulatory or technical questions, and support for complex cases.</p>
-<p data-i18n="offer4Duration"><b>Indicative price:</b> 800€ – 1,500€ (depending on scope)</p>
+  <div class="deliverable-card reveal">
+    <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/strategy.png" alt="ATC² TACTICS Logo" class="logocard">  
+    <h3 data-i18n="offer3Title">Full Audit & Procedure Drafting</h3>
+    <p data-i18n="offer3Description">Comprehensive analysis, detailed risk matrix, optimization, and procedure drafting/updating.</p>
+    <p data-i18n="offer3Duration"><b>Duration:</b> 7–10 days </p>
+  </div>
+
+  <div class="deliverable-card reveal">
+    <img src="https://raw.githubusercontent.com/ATC2-TACTICS/index/refs/heads/main/interactive.png" alt="ATC² TACTICS Logo" class="logocard">  
+    <h3 data-i18n="offer4Title">Ongoing Support</h3>
+    <p data-i18n="offer4Description">On-demand answers to regulatory or technical questions, and support for complex cases.</p>
+    <p data-i18n="offer4Duration"></p>
+  </div>
 </div>
 </section>
 
-<section>
-<h2 data-i18n="travelTitle">Travel Fee Policy</h2>
-<ul>
-<li data-i18n="travelLocal">Local zone (≤ 50 km round trip): included</li>
-<li data-i18n="travelRegional">Regional zone (51–250 km): 150€/day + actual expenses</li>
-<li data-i18n="travelNational">National (>250 km or overnight stay): 300€/day + actual expenses</li>
-<li data-i18n="travelInternational">International: upon request (travel & accommodation at client’s expense)</li>
-</ul>
+<hr>
+
+<section id="training">
+  <h2 data-i18n="trainingTitle">Professional Training Services</h2>
+  <p data-i18n="trainingSubtitle">Empower your team with specialized, up-to-date knowledge in Customs and Export Control compliance.</p>
+
+  <div class="training-offers-grid reveal">
+    <div class="training-card">
+      <h3 data-i18n="trainingLiveTitle">Live Webinars & Workshops</h3>
+      <p data-i18n="trainingLiveDesc">Interactive, live sessions tailored for your team's specific industry and compliance needs.</p>
+      <ul>
+        <li data-i18n="trainingLiveTopic1">Incoterms, HS Classification, Valuation</li>
+        <li data-i18n="trainingLiveTopic2">Dual-Use Goods, Sanctions, Embargoes</li>
+      </ul>
+      <a href="mailto:tristan.arcofora@atc2-tactics.com" class="cta-button" data-i18n="trainingLiveButton">Request a Workshop</a>
+    </div>
+
+    <div class="training-card">
+      <h3 data-i18n="trainingOnDemandTitle">On-Demand Compliance Courses</h3>
+      <p data-i18n="trainingOnDemandDesc">Self-paced video modules for flexible, continuous professional development and staff onboarding.</p>
+      <ul>
+        <li data-i18n="trainingOnDemandTopic1">Full Compliance Refresher Course</li>
+        <li data-i18n="trainingOnDemandTopic2">Certification Prep Modules</li>
+      </ul>
+      <a href="#contact-section" class="cta-button" data-i18n="trainingOnDemandButton">View Course Catalog</a>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
+<hr>
+
+<section class="cta" id="contact-section">
 <h2 data-i18n="contactTitle">📩 Get in Touch</h2>
 <p data-i18n="contactText">Contact me to discuss your needs and build a tailored solution.</p>
 <a href="mailto:tristan.arcofora@atc2-tactics.com" data-i18n="contactButton">Email Me</a>
@@ -182,92 +318,132 @@ My mission is to simplify complex regulations and provide actionable solutions.
 <footer>
 <p data-i18n="footerCopyright">© 2025 Tristan ARCOFORA – Customs & Export Control Consultant</p>
 <div class="contact-info">
-<p> tristan.arcofora@atc2-tactics.com |  <a href="https://www.linkedin.com/in/tristanarcofora/" style="color: #1da1f2;">LinkedIn</a> |  <a href="https://www.malt.fr/profile/tristanarcofora" style="color: #1da1f2;">Malt Profile</a> |  <a href="https://www.fiverr.com/tristanarcofora?public_mode=true" style="color: #1da1f2;">Fivver Profile</a> |  <a href="https://www.upwork.com/freelancers/~01211ebbf8451cebe6?viewMode=1" style="color: #1da1f2;">Upwork Profile</a></p>
-<a href="privacy.html" style="color: #1da1f2;">Privacy Policy</a> | 
+<p> tristan.arcofora@atc2-tactics.com |  <a href="https://www.linkedin.com/in/tristanarcofora/" style="color: #1da1f2;">LinkedIn</a> |  <a href="https://www.malt.fr/profile/tristanarcofora" style="color: #1da1f2;">Malt Profile</a> |  <a href="https://www.fiverr.com/tristanarcofora?public_mode=true" style="color: #1da1f2;">Fivver Profile</a> |  <a href="https://www.upwork.com/freelancers/~01211ebbf8451cebe6?viewMode=1" style="color: #1da1f2;">Upwork Profile</a></p>
+<a href="privacy.html" style="color: #1da1f2;">Privacy Policy</a> | 
 <a href="terms.html" style="color: #1da1f2;">Terms of Service</a>
 </div>
 </footer>
 
 <script>
-    const translations = {
-        en: {
-            pageTitle: 'Customs & Export Control Consultant - Tristan ARCOFORA',
-            headerSubtitle: 'Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore',
-            aboutMeTitle: 'About Me',
-            aboutMeText: 'With extensive experience in customs regulations and export control across multiple regions, I help businesses secure compliance and optimize their international operations. My mission is to simplify complex regulations and provide actionable solutions.',
-            offersTitle: 'Consulting Offers',
-            offer1Title: 'Offer 1: Flash Audit (Customs or Export Control)',
-            offer1Description: '1h initial interview, rapid analysis of existing procedures, and a concise report with 3–5 priority points.',
-            offer1Duration: '<b>Duration:</b> ½ day (650€) / Full day (Customs + Export Control: 1,200€)',
-            offer2Title: 'Offer 2: In-Depth Diagnostic',
-            offer2Description: 'Detailed analysis of practices & procedures, creation of a simplified risk matrix, and a short-term action plan.',
-            offer2Duration: '<b>Duration:</b> ~3 days | <b>Indicative price:</b> 3,500€ (+1,000€ option for 2 days of flow & cost analysis)',
-            offer3Title: 'Offer 3: Full Audit',
-            offer3Description: 'Comprehensive activity analysis, detailed risk matrix, action plan, customs flow & cost optimization, procedure drafting/updating.',
-            offer3Duration: '<b>Duration:</b> 7–10 days | <b>Indicative Price:</b> 6,000€',
-            offer4Title: 'Offer 4: Ongoing Support',
-            offer4Description: 'On-demand answers to regulatory or technical questions, and support for complex cases.',
-            offer4Duration: '<b>Price:</b> 800€ – 1,500€ (depending on scope)',
-            travelTitle: 'Travel Fee Policy',
-            travelLocal: 'Local zone (≤ 50 km round trip): included',
-            travelRegional: 'Regional zone (51–250 km): 150€/day + actual expenses',
-            travelNational: 'National (>250 km or overnight stay): 300€/day + actual expenses',
-            travelInternational: 'International: upon request (travel & accommodation at client’s expense)',
-            contactTitle: 'Get in Touch',
-            contactText: 'Contact me to discuss your needs and build a tailored solution.',
-            contactButton: 'Email Me',
-            footerCopyright: '© 2025 Tristan ARCOFORA – Customs & Export Control Consultant'
-        },
-        fr: {
-            pageTitle: 'Conseil Douanes & Contrôle des Exportations - Tristan ARCOFORA',
-            headerSubtitle: 'Conseil Douanes & Contrôle des Exportations – Expertise: US / EU / UK / Hong Kong / Singapore',
-            aboutMeTitle: 'À propos de moi',
-            aboutMeText: 'Fort d\'une vaste expérience en réglementation douanière et en contrôle des exportations dans plusieurs régions, j\'aide les entreprises à assurer leur conformité et à optimiser leurs opérations internationales. Ma mission est de simplifier les réglementations complexes et de fournir des solutions concrètes.',
-            offersTitle: 'Offres de services',
-            offer1Title: 'Offre 1: Audit Flash (Douanes ou Contrôle des Exportations)',
-            offer1Description: 'Entretien initial d\'1h, analyse rapide des procédures existantes et rapport concis avec 3 à 5 points prioritaires.',
-            offer1Duration: '<b>Durée:</b> ½ journée (650€) / Journée complète (Douanes + Contrôle des Exportations : 1 200€)',
-            offer2Title: 'Offre 2: Diagnostic Approfondi',
-            offer2Description: 'Analyse détaillée des pratiques et procédures, création d\'une matrice de risques simplifiée et plan d\'action à court terme.',
-            offer2Duration: '<b>Durée:</b> ~3 jours | <b>Prix indicatif :</b> 3 500€ (+1 000€ option pour 2 jours d\'analyse de flux et de coûts)',
-            offer3Title: 'Offre 3: Audit Complet',
-            offer3Description: 'Analyse complète des activités, matrice de risques détaillée, plan d\'action, optimisation des flux et des coûts douaniers, rédaction/mise à jour des procédures.',
-            offer3Duration: '<b>Durée:</b> 7–10 jours | <b>Prix indicatif :</b> 6 000€',
-            offer4Title: 'Offre 4: Support continu',
-            offer4Description: 'Réponses à la demande aux questions réglementaires ou techniques, et support pour les cas complexes.',
-            offer4Duration: '<b>Prix:</b> 800€ – 1 500€ (selon scope)',
-            travelTitle: 'Politique des frais de déplacement',
-            travelLocal: 'Zone locale (≤ 50 km aller-retour) : incluse',
-            travelRegional: 'Zone régionale (51–250 km) : 150€/jour + frais réels',
-            travelNational: 'Nationale (>250 km ou nuitée) : 300€/jour + frais réels',
-            travelInternational: 'Internationale : sur demande (voyage et hébergement à la charge du client)',
-            contactTitle: 'Me contacter',
-            contactText: 'Contactez-moi pour discuter de vos besoins et construire une solution sur mesure.',
-            contactButton: 'M\'envoyer un e-mail',
-            footerCopyright: '© 2025 Tristan ARCOFORA – Conseil Douanes & Contrôle des Exportations'
-        }
-    };
+    const translations = {
+        en: {
+            pageTitle: 'Customs & Export Control Consultant - Tristan ARCOFORA',
+            headerSubtitle: 'Customs & Export Control Consultant – Expertise: US / EU / UK / Hong Kong / Singapore',
+            navAbout: 'About',
+            navConsulting: 'Consulting',
+            navTraining: 'Training',
+            navContact: 'Contact',
+            aboutMeTitle: 'About Me',
+            aboutMeText: 'With extensive experience in customs regulations and export control across multiple regions, I help businesses secure compliance and optimize their international operations. My mission is to simplify complex regulations and provide actionable solutions.',
+            offersTitle: 'Consulting Offers',
+            offer1Title: 'Flash Audit (Customs or Export Control)',
+            offer1Description: '1h interview, rapid analysis, and a concise report with 3–5 priority points.',
+            offer1Duration: '<b>Duration:</b> ½ day / Full day (Customs + Export Control)',
+            offer2Title: 'In-Depth Diagnostic',
+            offer2Description: 'Detailed analysis of practices, simplified risk matrix, and a short-term action plan.',
+            offer2Duration: '<b>Duration:</b> ~3 days',
+            offer3Title: 'Full Audit & Procedure Drafting',
+            offer3Description: 'Comprehensive activity analysis, detailed risk matrix, optimization, and procedure drafting/updating.',
+            offer3Duration: '<b>Duration:</b> 7–10 days',
+            offer4Title: 'Ongoing Support',
+            offer4Description: 'On-demand answers to regulatory or technical questions, and support for complex cases.',
+            offer4Duration: '',
+            trainingTitle: 'Professional Training Services',
+            trainingSubtitle: 'Empower your team with specialized, up-to-date knowledge in Customs and Export Control compliance.',
+            trainingLiveTitle: 'Live Webinars & Workshops',
+            trainingLiveDesc: 'Interactive, live sessions tailored for your team\'s specific industry and compliance needs.',
+            trainingLiveTopic1: 'Incoterms, HS Classification, Valuation',
+            trainingLiveTopic2: 'Dual-Use Goods, Sanctions, Embargoes',
+            trainingLiveButton: 'Request a Workshop',
+            trainingOnDemandTitle: 'On-Demand Compliance Courses',
+            trainingOnDemandDesc: 'Blended Learning with a balanced mix of video modules, interactive sessions, use cases and quizzes adapted to continuous professional development and staff onboarding.',
+            trainingOnDemandTopic1: 'Complete courses to learn everything you need to know about Customs and Export Control',
+            trainingOnDemandTopic2: 'Available as both open (inter) and customized on-site sessions (intra)',
+            trainingOnDemandButton: 'View Course Catalog',
+            contactTitle: 'Get in Touch',
+            contactText: 'Contact me to discuss your needs and build a tailored solution.',
+            contactButton: 'Email Me',
+            footerCopyright: '© 2025 Tristan ARCOFORA – Customs & Export Control Consultant'
+        },
+        fr: {
+            pageTitle: 'Conseil Douanes & Contrôle des Exportations - Tristan ARCOFORA',
+            headerSubtitle: 'Conseil Douanes & Contrôle des Exportations – Expertise: US / EU / UK / Hong Kong / Singapore',
+            navAbout: 'À Propos',
+            navConsulting: 'Conseil',
+            navTraining: 'Formation',
+            navContact: 'Contact',
+            aboutMeTitle: 'À propos',
+            aboutMeText: 'Fort d\'une vaste expérience en réglementation douanière et en contrôle des exportations dans plusieurs régions, j\'aide les entreprises à assurer leur conformité et à optimiser leurs opérations internationales. Ma mission est de simplifier les réglementations complexes et de fournir des solutions concrètes.',
+            offersTitle: 'Offres de services',
+            offer1Title: 'Audit Flash (Douanes ou Contrôle des Exportations)',
+            offer1Description: 'Entretien initial d\'1h, analyse rapide des procédures existantes et rapport concis avec 3 à 5 points prioritaires.',
+            offer1Duration: '<b>Durée:</b> ½ journée',
+            offer2Title: 'Diagnostic Approfondi',
+            offer2Description: 'Analyse détaillée des pratiques et procédures, création d\'une matrice de risques simplifiée et plan d\'action à court terme.',
+            offer2Duration: '<b>Durée:</b> ~3 jours',
+            offer3Title: 'Audit Complet & Rédaction de Procédures',
+            offer3Description: 'Analyse complète des activités, matrice de risques détaillée, optimisation, et rédaction/mise à jour des procédures.',
+            offer3Duration: '<b>Durée:</b> 7–10 jours',
+            offer4Title: 'Support continu',
+            offer4Description: 'Réponses à la demande aux questions réglementaires ou techniques, et support pour les cas complexes.',
+            offer4Duration: '',
+            trainingTitle: 'Formation Professionnelle',
+            trainingSubtitle: 'Donnez à votre équipe les connaissances spécialisées et à jour en matière de conformité Douanes et Contrôle des Exportations.',
+            trainingLiveTitle: 'Webinaires & Ateliers sur mesure',
+            trainingLiveDesc: 'Sessions interactives adaptées aux besoins spécifiques de votre secteur ou de votre entreprise.',
+            trainingLiveTopic1: 'Incoterms, Classification, Valorisation',
+            trainingLiveTopic2: 'Biens à Double Usage, Sanctions, Embargos',
+            trainingLiveButton: 'Demander un Atelier',
+            trainingOnDemandTitle: 'Formation à la Demande',
+            trainingOnDemandDesc: 'Formations en mode Blended Learning, combinant apports théoriques,vidéos, cas pratiques et vérification des acquis.',
+            trainingOnDemandTopic1: 'Suivez un cursus complet pour tout connaître de la Douane et du Contrôle des Exportations',
+            trainingOnDemandTopic2: 'Formations disponibles en intra et inter',
+            trainingOnDemandButton: 'Voir le Catalogue',
+            contactTitle: 'Me contacter',
+            contactText: 'Contactez-moi pour discuter de vos besoins et construire une solution sur mesure.',
+            contactButton: 'M\'envoyer un e-mail',
+            footerCopyright: '© 2025 Tristan ARCOFORA – Conseil Douanes & Contrôle des Exportations'
+        }
+    };
 
-    function changeLanguage(lang) {
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                // Check if the translation contains HTML (like the <b> tag)
-                if (translations[lang][key].includes('<b>')) {
-                    element.innerHTML = translations[lang][key];
-                } else {
-                    element.textContent = translations[lang][key];
-                }
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                // Check if the translation contains HTML (like the <b> tag)
+                if (translations[lang][key].includes('<b>')) {
+                    element.innerHTML = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+
+        // Update the page title separately
+        document.title = translations[lang].pageTitle;
+        
+        // Update the lang attribute on the HTML tag
+        document.documentElement.lang = lang;
+    }
+
+    // Set initial language on page load
+    changeLanguage('en');
+    // --- ANIMATION SCRIPT ---
+    const observerOptions = { threshold: 0.15 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
             }
         });
+    }, observerOptions);
 
-        // Update the page title separately
-        document.title = translations[lang].pageTitle;
-    }
-
-    // Set initial language on page load
-    changeLanguage('en');
+    document.addEventListener("DOMContentLoaded", () => {
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+        changeLanguage('en');
+    });
 </script>
 
 </body>
